@@ -22,7 +22,8 @@ function showItems(n) {
     if (n === carouselItems.length) { centerIndex = 0 }
     if (n < 0) { centerIndex = carouselItems.length - 1 }
     for (let i = 0; i < carouselItems.length; i++) {
-        carouselItems[i].style.display = "none";  
+        carouselItems[i].style.display = "none";
+        carouselItems[i].classList.remove("active-left", "active-center", "active-right");  
     }
     carouselItems[centerIndex].style.display = "block";
     carouselItems[centerIndex].classList.add("active-center");

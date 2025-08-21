@@ -2,13 +2,41 @@
 
 /* Slideshow container */
 .slideshow-container {
-  max-width: 1000px;
+  border: solid 2px #000000;
+  max-width: 1200px;
+  height: 600px;
   position: relative;
   margin: auto;
 }
 
+.carousel-items {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
 .carousel-item {
   display: none;
+  transition: transform 0.5s ease;
+  position: absolute;
+}
+
+.active-center {
+  transform: translateX(0);
+  z-index: 2;
+}
+
+.active-left {
+  transform: translateX(calc(-100% - 20px));
+  z-index: 1;
+}
+
+.active-right {
+  transform: translateX(calc(100% + 20px));
+  z-index: 1;
 }
 
 .prev, .next {
